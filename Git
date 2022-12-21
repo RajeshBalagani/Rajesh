@@ -1,0 +1,52 @@
+Git & Github:
+
+Git: It is a Loacal repo.
+Github: It is a Central repo.
+
+* Any files or any code to push into the Github first we need to create a key using ssh-keygen
+* Copy the key from the given location and paste the key in the github sshkey.
+
+Git Clone (SSH url) to access the github.
+
+Gitworkflow:
+
+(1)Workspace: Creating a file. (untracked files in Red Color)
+
+(2)Index: git add filename (To update the file from workspace to index.) (Unstage and in Green color)
+
+(3)Local repo: git commit -m "descriprion(any text)" (To enter into the local repo) (Nothing to commit and working tree clean).
+
+(4)Central Repo: git push remotename branchname (To push into the Central repo)
+
+Git Commands:
+
+* git --version : To know the version of the git.
+* git status : To know the Status.
+* git log : Shows the history with a Commit ID
+* git reflog : Shows the history but with a short Commit ID
+* git diff : To know the latest Changes.
+* git remote : Shows all the remotes
+* git branch : Shows all the Branches
+* git remote add newremotename SSH Url : To Create a new remote.
+* git remote rename OldName NewName : To change the name.
+* git remote remove name : To remove the remote.
+* git checkout -b NewBranchName : to create a new branch
+* git fetch : updates the central repo
+* git merge : Retrive the data changes
+* git pull : fetch + merege
+
+Branching flow:
+
+In Realtime there are many branches, Normally we should work on the different types of environments like dev, test and prod etc
+
+For eg If we work on the dev then first change our branch to dev using git checkout branchname.
+
+Next work on the dev and use the gitflow to push into the dev environment.
+
+Merging: Once we push the code into our own environment then use the steps below:
+
+1. Checkout destination: git checkout main
+2. Merge Source : git merge dev
+3. Push : git push origin main.
+
+
